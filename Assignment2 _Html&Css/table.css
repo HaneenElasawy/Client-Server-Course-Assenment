@@ -1,0 +1,50 @@
+body {
+    background-color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.table-container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #f7f7f7;
+    padding: 15px;
+}
+
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.team-table th {
+    background-color: #4f81bd;
+    color: white;
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+.team-table td {
+    padding: 8px;
+    border: 1px solid #333;
+}
+
+.team-table .alt {
+    background-color: #e6eef8;
+}
+
+.team-table .team {
+    background-color: #d6e3f3;
+    font-weight: bold;
+}
+
+.team-table .note td {
+    background-color: #f2f2f2;
+    font-style: italic;
+    text-align: center;
+}
+
+.team-table a {
+    color: gray;
+    text-decoration: underline;
+    font-size: 12px;
+}

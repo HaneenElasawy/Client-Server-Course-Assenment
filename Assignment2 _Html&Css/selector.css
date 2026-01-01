@@ -1,0 +1,82 @@
+/* 1- select p elements and make them red */
+
+
+p{
+    color: red;
+}
+
+
+/* --------------------------------------------------------- */
+
+/* 2- select p and div elements  */
+
+p , div {
+color: blue;
+}
+/* --------------------------------------------------------- */
+
+/* 3- select p with class mainClass direct child for div with id myDiv and make it styled  */
+
+#myDiv > p.mainClass {
+    color: green;
+    font-weight: bold;
+}
+
+/* --------------------------------------------------------- */
+
+
+/* 4- select all p inside div and style them  */
+
+div p {
+    color: purple;
+}
+
+
+/* --------------------------------------------------------- */
+
+/* 5- select input with type text element with class myClass */
+
+input[type="text"].myClass {
+   background-color: yellow;
+}
+
+
+/* --------------------------------------------------------- */
+/* 6- select span elements after div  */
+
+div + span {
+    font-size: 20px;
+    color: rgb(255, 0, 0);
+}
+
+/* --------------------------------------------------------- */
+/* 7- select p with class myClass  */
+
+p.myClass {
+    color: rgb(0, 204, 255);
+}
+
+
+/* --------------------------------------------------------- */
+/* 8- select div with id myDiv  */
+
+#myDiv {
+    border: 2px solid black;
+}
+
+
+/* --------------------------------------------------------- */
+/* a.	Make the font type "Lucida Calligraphy" for any p or div or span tag (use one CSS rule). */
+
+
+p, div, span {
+    font-family: "Lucida Calligraphy";
+    }
+
+
+
+/* --------------------------------------------------------- */
+ /* b.	<h1> tag which is child from div tag to be in the center of the page. */
+ div > h1 {
+    text-align: center;
+}
