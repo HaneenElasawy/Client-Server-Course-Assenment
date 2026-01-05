@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions Tasks</title>
+
+    <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+            font-family:"Segoe UI",system-ui,sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            background:#020617;
+            color:#e5e7eb;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            padding-top:40px;
+            gap:14px;
+        }
+
+        h2{
+            margin-bottom:10px;
+        }
+
+        .card{
+            background:#020617;
+            border:1px solid #334155;
+            border-radius:12px;
+            padding:18px 22px;
+            min-width:300px;
+            box-shadow:0 10px 25px rgba(15,23,42,.6);
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+        }
+
+        button{
+            padding:8px 18px;
+            border:none;
+            border-radius:999px;
+            cursor:pointer;
+            font-weight:600;
+            color:white;
+        }
+
+        .btn1{ background:#22c55e; }
+        .btn2{ background:#3b82f6; }
+        .btn3{ background:#f97316; }
+        .btn4{ background:#a855f7; }
+
+        button:hover{
+            opacity:.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Function Tasks</h2>
+
+    <div class="card">
+        <button class="btn1" onclick="runFunction1()">Function 1 — Accept only 2 parameters</button>
+        <button class="btn2" onclick="runFunction2()">Function 2 — Reverse parameters</button>
+        <button class="btn3" onclick="runFunction3()">Function 3 — Add numbers</button>
+        <button class="btn4" onclick="runFunction4()">Function 4 — Get day name</button>
+    </div>
+
+    <script src="task5.js"></script>
+</body>
+</html>
