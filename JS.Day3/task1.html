@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Task 1</title>
+
+    <style>
+        /* page background */
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #c7d2fe, #fef3c7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* main container */
+        .card{
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 15px 25px rgba(0,0,0,.08);
+            width: 360px;
+            text-align: center;
+        }
+
+        /* button */
+        button{
+            padding: 10px 18px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            background:#4f46e5;
+            color: #fff;
+        }
+
+        button:hover{
+            opacity: .9;
+        }
+
+        /* result box */
+        #output{
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 8px;
+            background: #f3f4f6;
+            text-align: left;   /* make result readable */
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h3>Sorting Task</h3>
+
+        <button onclick="start()">Start Sorting</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        // callback to handle results
+        function handleArray(arr) {
+            var original = arr.slice();
+            var desc = arr.slice().sort(function (a, b) { return b - a; });
+            var asc  = arr.slice().sort(function (a, b) { return a - b; });
+
+            document.getElementById("output").innerHTML =
+                "you've entered: " + original.join(", ") + "<br>" +
+                "descending: " + desc.join(", ") + "<br>" +
+                "ascending: " + asc.join(", ");
+        }
+
+        function start() {
+            var arr = [];
+
+            for (var i = 0; i < 5; i++) {
+                var value;
+                do {
+                    value = Number(prompt("Enter number " + (i + 1) + ":"));
+                } while (isNaN(value));
+
+                arr.push(value);
+            }
+
+            handleArray(arr);
+        }
+    </script>
+
+</body>
+</html>
