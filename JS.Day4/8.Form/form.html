@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 8 - Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #d7a11b;
+    }
+
+    .box {
+      width: 520px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #d7a11b;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+
+    label {
+      width: 70px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 180px;
+      padding: 4px;
+      border: 1px solid #444;
+      outline: none;
+    }
+
+    .error {
+      color: red;
+      font-size: 12px;
+      min-width: 160px;
+    }
+
+    .btns {
+      margin: 10px 0 15px;
+      display: flex;
+      gap: 10px;
+      padding-left: 80px;
+    }
+
+    button {
+      padding: 5px 14px;
+      border: 1px solid #444;
+      background: #eee;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #d7a11b;
+    }
+
+    th, td {
+      border: 2px solid #333;
+      padding: 6px;
+      text-align: center;
+      background: #d7a11b;
+    }
+
+    th {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <form id="userForm" novalidate>
+      <div class="row">
+        <label for="name">Name</label>
+        <input id="name" type="text" autocomplete="off" />
+        <span id="nameErr" class="error"></span>
+      </div>
+
+      <div class="row">
+        <label for="age">Age</label>
+        <input id="age" type="text" autocomplete="off" />
+        <span id="ageErr" class="error"></span>
+      </div>
+
+      <div class="row">
+        <label for="email">E-mail</label>
+        <input id="email" type="text" autocomplete="off" />
+        <span id="emailErr" class="error"></span>
+      </div>
+
+      <div class="btns">
+        <button type="button" id="addBtn">Add</button>
+        <button type="reset" id="resetBtn">Reset</button>
+      </div>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>E-mail</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>
