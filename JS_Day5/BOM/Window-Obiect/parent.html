@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Parent Window</title>
+</head>
+<body>
+
+  <button id="openBtn">Open Child Window</button>
+
+  <script>
+    document.getElementById("openBtn").addEventListener("click", function () {
+      const child = window.open("child.html", "childWin", "width=400,height=250");
+
+      setTimeout(function () {
+        if (child && !child.closed) child.close();
+      }, 5000);
+    });
+  </script>
+</body>
+</html>

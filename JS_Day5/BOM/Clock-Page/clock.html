@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clock</title>
+</head>
+<body>
+
+  <button id="startBtn">Start Clock</button>
+  <h2 id="clock"></h2>
+
+  <script>
+    let timerId = null;
+
+    document.getElementById("startBtn").addEventListener("click", function () {
+      alert("Clock Started");
+
+      if (timerId) clearInterval(timerId);
+
+      timerId = setInterval(function () {
+        document.getElementById("clock").innerText =
+          new Date().toLocaleTimeString();
+      }, 1000);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.altKey && e.key.toLowerCase() === "w") {
+        if (timerId) {
+          clearInterval(timerId);
+          timerId = null;
+        }
+        alert("Clock stopped");
+      }
+    });
+  </script>
+
+</body>
+</html>

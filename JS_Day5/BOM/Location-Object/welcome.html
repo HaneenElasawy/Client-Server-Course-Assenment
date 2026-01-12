@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome</title>
+</head>
+<body>
+
+  <h2 id="greeting"></h2>
+  <hr>
+  <div id="info"></div>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+
+    const title = params.get("title") || "";
+    const name = params.get("name") || "";
+
+    document.getElementById("greeting").innerText =
+      "Welcome " + title + " " + name;
+
+    document.getElementById("info").innerHTML =
+      "<b>Address:</b> " + (params.get("address") || "") + "<br>" +
+      "<b>Gender:</b> " + (params.get("gender") || "") + "<br>" +
+      "<b>Email:</b> " + (params.get("email") || "") + "<br>" +
+      "<b>Mobile:</b> " + (params.get("mobile") || "");
+  </script>
+
+</body>
+</html>
