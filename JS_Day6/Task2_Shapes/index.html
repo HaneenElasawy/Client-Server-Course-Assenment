@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shape Classes Task</title>
+</head>
+<body>
+
+<script src="shapes.js"></script>
+<script>
+  try {
+    const rect = new Rectangle(10, 5);
+    console.log(rect.toString());
+
+    const sq = new Square(6);
+    console.log(sq.toString());
+
+    const c1 = new Circle(4);
+    console.log(c1.toString());
+
+    const c2 = new Circle(2);
+    console.log(c2.toString());
+
+    console.log("Total Shapes:", Shape.getCount());
+
+    // Uncomment to test bonus restriction
+    // const sq2 = new Square(3);
+    // const r2 = new Rectangle(2, 2);
+
+  } catch (e) {
+    console.error(e.message);
+  }
+</script>
+
+</body>
+</html>

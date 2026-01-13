@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 3 - Box & Books</title>
+</head>
+<body>
+
+<script src="boxBooks.js"></script>
+<script>
+  try {
+    const b1 = new Book("Clean Code", 17, "Robert C. Martin", 464, "Pearson", 2, "programming");
+    const b2 = new Book("JS Guide", 10, "MDN", 300, "Mozilla", 1, "programming");
+    const b3 = new Book("Harry Potter", 25, "J.K. Rowling", 350, "Bloomsbury", 3, "novel");
+
+    const box1 = new Box(10, 5, 4, "Wood");
+    box1.addBook(b1);
+    box1.addBook(b2);
+
+    const box2 = new Box(8, 4, 4, "Plastic");
+    box2.addBook(b3);
+
+    console.log("---- Box1 ----");
+    console.log(box1.toString());
+
+    console.log("---- Box2 ----");
+    console.log(box2.toString());
+
+    console.log("Box1 count:", box1.countBooks());
+    console.log("Box2 count:", box2.countBooks());
+
+    console.log("Total books (box1 + box2):", box1 + box2);
+
+    console.log("Delete by name 'JS Guide' from box1:");
+    console.log("Deleted:", box1.deleteBookByName("JS Guide"));
+    console.log(box1.toString());
+
+    console.log("Delete by type 'programming' from box1:");
+    console.log("Deleted:", box1.deleteBookByType("programming"));
+    console.log(box1.toString());
+
+  } catch (e) {
+    console.error(e.message);
+  }
+</script>
+
+</body>
+</html>
